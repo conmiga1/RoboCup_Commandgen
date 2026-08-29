@@ -57,6 +57,3 @@ options:
   -d DATA_DIR, --data-dir DATA_DIR
                         directory where the data is read from
 ```
-
-<img src="docs/gpsr-ui-ref.png" alt="Generate View" style="width:45%; height:auto;">
-<img src="docs/gpsr-ui.png" alt="Display View" style="width:45%; height:auto;">
