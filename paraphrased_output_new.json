@@ -1,0 +1,3602 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person waving from the living room, and report on the largest snack item on the dining table, then proceed to the kitchen to follow the person lying down."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"biggest\",\"placement_location\":\"dining table\"},{\"sequence\":3,\"action\":\"followPrsAtLoc\",\"pose\":\"lying person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the thinnest object on the hallway shelf, salute Ivan who is present in the dining room, then relocate the standing person who is placed on the TV stand to the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"thinnest\",\"placement_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Ivan\",\"room\":\"dining room\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"standing person\",\"from_location\":\"tv stand\",\"to_location\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPlease go to the study and greet Julia with a hello."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Julia\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the people in the hallway wearing a white blouse, then proceed to meet Diana at the living room couch before checking the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white blouse\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Diana\",\"meet_location\":\"living room couch\",\"find_room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of electronic items on the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"electronic\",\"placement_location\":\"nightstand\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"pose\":\"standing person\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGet me a snack from the bedroom desk."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"snack\",\"source_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nApproach the person in the black jacket in the dining room and say \"Hi, I'm [your name]. I'm so glad to finally meet you,\" before turning to follow the person waving in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"black jacket\",\"room\":\"dining room\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell me what is the largest drink item on the bookshelf, and then guide the person wearing a black shirt from the nightstand to the hallway shelf, with the person being the one to move to the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"drink\",\"object_comparator\":\"largest\",\"placement_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"black shirt\",\"from_location\":\"nightstand\",\"to_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person pointing to the right in the bedroom that tomorrow is Wednesday."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"what day is tomorrow\",\"gesture\":\"person pointing to the right\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"biggest\",\"placement_location\":\"kitchen table\"},{\"sequence\":3,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Julia\",\"from_location\":\"side table\",\"to_room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Hannah from her bedroom desk to the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Hannah\",\"from_location\":\"bedroom desk\",\"to_room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind a drink item in the garden and then report back to me about the number of individuals in the living room wearing a red jacket after you've observed the person sitting alone in the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"drink\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"pose\":\"sitting person\",\"room\":\"dining room\"},{\"sequence\":3,\"action\":\"countClothPrsInRoom\",\"clothing\":\"red jacket\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the thinnest snack item on the hallway shelf, count the number of drink items on the TV stand, and describe the person pointing to the right in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"thinnest\",\"placement_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"drink\",\"placement_location\":\"tv stand\"},{\"sequence\":3,\"action\":\"findPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the bathroom, then escort Hannah from the office chair to the bedroom and afterwards guide her from the kitchen table to the garden bench."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Hannah\",\"from_location\":\"office chair\",\"to_room\":\"bedroom\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"sitting person\",\"from_location\":\"kitchen table\",\"to_location\":\"garden bench\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Fiona from the counter to the dining table, and report the number of drink items on the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Fiona\",\"from_location\":\"counter\",\"to_location\":\"dining table\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"drink\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the office, notice the individual in the bathroom wearing a grey jacket, and then head to the garden to find out how many people are waving."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"office\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"gray jacket\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"countPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTake a pen from the kitchen table, meet Nancy at the counter, and then go to the living room to count the sitting persons."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Nancy\",\"location\":\"counter\"},{\"sequence\":3,\"action\":\"countPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nWalk with the individual in the blue shirt from the entrance to the garden, and afterwards provide the count of staff members in the office currently wearing a white blouse."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"blue shirt\",\"from_location\":\"entrance door\",\"to_location\":\"garden\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white blouse\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab a box of cornflakes from the counter, then identify the smallest item on the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"cereal\",\"source_location\":\"counter\"},{\"sequence\":2,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"smallest\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSalute the individual with the black blouse currently located in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"black blouse\",\"room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nRetrieve a book with a fruit character from the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"fruit\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce yourself to the person wearing a yellow jacket in the bathroom"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"yellow jacket\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people in the garden who are currently wearing a white sweater."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white sweater\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nBring a banana from the TV stand, then follow the person pointing left in the office to the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"banana\",\"source_location\":\"tv stand\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"person pointing to the left\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"goToLoc\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person with their right arm raised in the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"gesture\":\"person raising their right arm\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet Alice in the bathroom, then find and say hello to the person wearing a red jacket in the kitchen, and finally ask for the name of the person currently in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Alice\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"red jacket\",\"room\":\"kitchen\"},{\"sequence\":3,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nThe smallest object on the nightstand is likely a button from a shirt or a tiny pin."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"smallest\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLet the person sitting in the armchair to your left know that I'll be telling them what day tomorrow is, and then I'll be heading to the hallway."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"what day is tomorrow\",\"gesture\":\"person pointing to the left\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of individuals deceiving others in the garden, and then identify the total number of individuals in the kitchen who are wearing a gray sweater, before escorting Oliver from the cabinet to the desk in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"lying person\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"gray sweater\",\"room\":\"kitchen\"},{\"sequence\":3,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Oliver\",\"from_location\":\"cabinet\",\"to_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the smallest item, then follow the person standing, then retrieve a book from the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"smallest\",\"placement_location\":\"counter\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"pose\":\"standing person\",\"room\":\"garage\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"book\",\"source_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the person sitting in the bedroom and report back to me with the size of the largest beverage on the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"drink\",\"object_comparator\":\"biggest\",\"placement_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nStart by walking from the hallway shelf towards the bedroom and make your way to the desk where you can stop for a moment."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the right\",\"from_location\":\"hallway shelf\",\"to_location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Kevin\",\"meet_location\":\"tv stand\",\"find_room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Charlie from the bookshelf to the hallway shelf, and then count the utensils on the cabinet before informing the person on the couch about the person at the entrance."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Charlie\",\"from_location\":\"bookshelf\",\"to_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"cabinet\"},{\"sequence\":3,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"living room couch\",\"to_location\":\"entrance door\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSalute the individual in the kitchen wearing the gray coat, escort the person in the orange shirt from the kitchen table to the dining room, and then report the quantity of stationery items on the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"gray coat\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"orange shirt\",\"from_location\":\"kitchen table\",\"to_location\":\"dining room\"},{\"sequence\":3,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount how many people in the dining room are wearing a black jacket after moving to the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"black jacket\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the electronic devices on the TV stand, such as the TV itself, gaming console, streaming device, DVD player, and soundbar, to determine the total number."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"electronic\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLocate Julia at the hallway shelf, then proceed to the garden to find them, then guide Julia back to the entrance door and lead her to the hallway shelf, finally find a utensil in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Julia\",\"meet_location\":\"hallway shelf\",\"find_room\":\"garden\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Julia\",\"from_location\":\"entrance door\",\"to_location\":\"hallway shelf\"},{\"sequence\":3,\"action\":\"findObjInRoom\",\"object_category\":\"utensil\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the weight of the heaviest item on the TV stand and note the pose of the person in the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"tv stand\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nThe person at the cabinet is standing in a stationary position, facing the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"location\":\"cabinet\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Nancy\",\"from_location\":\"bathroom sink\",\"to_location\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Diana from the bookshelf to the study, then inform the waving person in the office that your team is from [country], before meeting Diana at the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Diana\",\"from_location\":\"bookshelf\",\"to_room\":\"study\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams country\",\"gesture\":\"waving person\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Diana\",\"location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPlease greet the person wearing the red sweater in the kitchen and have them bring me a chip from the side table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"red sweater\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"chips\",\"source_location\":\"side table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person waving in the garden to meet Nancy at her desk in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Nancy\",\"location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce yourself to Diana in the garden, grab a soda from the nightstand, and hand her an apple from the same location."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Diana\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"drink\",\"placement_location\":\"nightstand\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"fruit\",\"source_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the smallest object visible on the counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"smallest\",\"placement_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSay hello to Fiona and then head to the bedroom to meet her, before proceeding to the garden to meet Laura at the bench and finally returning to the bedroom to look for them."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Fiona\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Laura\",\"meet_location\":\"garden bench\",\"find_room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person in the orange blouse from the hallway shelf to the bookshelf, then count how many people are looking in the direction of the left in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"orange blouse\",\"from_location\":\"hallway shelf\",\"to_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"countPrsInRoom\",\"gesture\":\"person pointing to the left\",\"room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nInform the person in the office chair that the person at the side table is their name, and then follow the person waving from the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"side table\",\"to_location\":\"office chair\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nAsk the person at the kitchen table to tell the person at the entrance door the name of the person raising their left arm in the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"person raising their left arm\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"kitchen table\",\"to_location\":\"entrance door\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Kevin from the bedroom to the study using the desk as a temporary transit point."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Kevin\",\"from_location\":\"bedroom desk\",\"to_location\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify and point to the smallest object on the cabinet, then proceed to the living room to locate the person waving, and finally meet Oliver at the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"smallest\",\"placement_location\":\"cabinet\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"living room\"},{\"sequence\":3,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Oliver\",\"location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the person standing in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"pose\":\"standing person\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person from the hallway shelf to the dining table, and then find out how many people in the study are wearing a white jacket, and finally, locate a pen in the office."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"lying person\",\"from_location\":\"hallway shelf\",\"to_location\":\"dining table\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white jacket\",\"room\":\"study\"},{\"sequence\":3,\"action\":\"findObjInRoom\",\"object\":\"pen\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Kevin at the designated office chair."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Kevin\",\"location\":\"office chair\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Edward at the TV stand, then head to the bathroom to find them, after which follow Hannah from the cabinet to the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Edward\",\"meet_location\":\"tv stand\",\"find_room\":\"bathroom\"},{\"sequence\":2,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Hannah\",\"from_location\":\"cabinet\",\"to_room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of individuals in the garden wearing a bright orange jacket, then proceed to follow the person in the kitchen who has been dishonest."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"orange jacket\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"pose\":\"lying person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the bookshelf's white sweater-wearing figure to the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"white sweater\",\"from_location\":\"bookshelf\",\"to_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the individual with their right arm raised within the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"person raising their right arm\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet Fiona in the bathroom with a respectful salute."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Fiona\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Nancy as she walks from the garden bench to the office."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Nancy\",\"from_location\":\"garden bench\",\"to_room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nApproach the person wearing the gray blouse in the living room and say, \"Hi, I'm [Your Name], nice to meet you.\""
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"gray blouse\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person who is pointing left from the bedroom desk to the desk in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the left\",\"from_location\":\"bedroom desk\",\"to_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Charlie from the kitchen table to the office, and then provide a report on the number of people waving in the kitchen when you arrive, afterwards count the number of stationery items on the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Charlie\",\"from_location\":\"kitchen table\",\"to_room\":\"office\"},{\"sequence\":2,\"action\":\"countPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"kitchen\"},{\"sequence\":3,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person sitting in the garden, then escort the person in the gray t-shirt from the couch in the living room over to the counter, and finally guide the person pointing to the right from the kitchen table into the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"pose\":\"sitting person\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray t shirt\",\"from_location\":\"living room couch\",\"to_location\":\"counter\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the right\",\"from_location\":\"kitchen table\",\"to_location\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people standing in the living room and report the result, then proceed to the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"standing person\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the living room, locate Julia on the couch, and then check the bedroom desk for the lightest snack, while also identifying who is in the garden with their left arm raised."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Julia\",\"location\":\"living room couch\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"lightest\",\"placement_location\":\"bedroom desk\"},{\"sequence\":3,\"action\":\"findPrsInRoom\",\"gesture\":\"person raising their left arm\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the bedroom, say hello to the person wearing a white shirt, and then meet up with Charlie who will be waiting for you on the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"white shirt\",\"room\":\"bedroom\"},{\"sequence\":3,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Charlie\",\"location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the pens, pencils, notebooks, and any other writing or drawing tools on the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person currently watching TV from the TV stand to the bookshelf, then convey the name of the individual sitting at the office chair to the person sitting on the living room couch."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the right\",\"from_location\":\"tv stand\",\"to_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"office chair\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the individual spreading misinformation in the hallway, then proceed to the study to offer a warm hello to Hannah."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"pose\":\"lying person\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Hannah\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nBring a Coke from the hallway shelf, inform the person at the counter about the person at the side table, and state your team's affiliation to the person waving in the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"coke\",\"source_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"counter\",\"to_location\":\"side table\"},{\"sequence\":3,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams affiliation\",\"gesture\":\"waving person\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of individuals in the hallway wearing a white t-shirt, describe the smallest snack item on the dining table, and identify an electronic device located on the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white t shirt\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"smallest\",\"placement_location\":\"dining table\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"electronic\",\"source_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nInform the person at the TV stand that the name of the person at the hallway shelf is unknown, then proceed to investigate the lying person in the hallway, and subsequently, notify the waving person in the study of the current day's date."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"hallway shelf\",\"to_location\":\"tv stand\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"pose\":\"lying person\",\"room\":\"hallway\"},{\"sequence\":3,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the month\",\"gesture\":\"waving person\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person standing in the cabinet out to the entrance door."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"standing person\",\"from_location\":\"cabinet\",\"to_location\":\"entrance door\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of individuals in the bedroom with their right arm raised, then proceed to the dining table to meet Kevin."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"gesture\":\"person raising their right arm\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Kevin\",\"location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nBring the paperweight from the bedroom desk, and then tell me the weight of the heaviest item on the kitchen table, and finally count the number of items on the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"stationery\",\"source_location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"stationery\",\"object_comparator\":\"heaviest\",\"placement_location\":\"kitchen table\"},{\"sequence\":3,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the time to a waving person in the bathroom after you've gone there."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the time\",\"gesture\":\"waving person\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFirst, count the people in the living room wearing a white t-shirt, then salute Kevin in the dining room. Next, head to the office and determine the number of individuals pointing to the left."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white t shirt\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Kevin\",\"room\":\"dining room\"},{\"sequence\":3,\"action\":\"countPrsInRoom\",\"gesture\":\"person pointing to the left\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort Alice from the bedroom desk to the dining table, then introduce yourself to Charlie in the hallway."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Alice\",\"from_location\":\"bedroom desk\",\"to_location\":\"dining table\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Charlie\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people sitting in the living room and report back, then proceed to the office and from there head to the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"goToLoc\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nRetrieve the notebook from the bedroom desk and subsequently find a beverage in the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"notebook\",\"placement_location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"drink\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Charlie from the shelf in the hallway to the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Charlie\",\"from_location\":\"hallway shelf\",\"to_room\":\"study\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Oliver from the bedroom desk to the dining room, then retrieve a juice from the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Oliver\",\"from_location\":\"bedroom desk\",\"to_room\":\"dining room\"},{\"sequence\":2,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"juice\",\"source_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nRetrieve a bookshelf item and a study item that are a utensil and a fruit respectively."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"fruit\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people standing in the kitchen area."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"standing person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind George in the garden, then proceed to the garage to locate them, and finally, locate a utensil in the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"George\",\"meet_location\":\"garden bench\",\"find_room\":\"garage\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"utensil\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the garden, greet Kevin, and then report on the largest food item you see on the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Kevin\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"biggest\",\"placement_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPlease inform the person at the hallway shelf that the person at the counter is available to be named."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"counter\",\"to_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow someone waving in the bedroom, then direct the person in the gray coat from the nightstand to the hallway shelf, and finally report the pose of the person at the garden bench."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray coat\",\"from_location\":\"nightstand\",\"to_location\":\"hallway shelf\"},{\"sequence\":3,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"location\":\"garden bench\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Fiona from the TV stand to the living room couch."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Fiona\",\"from_location\":\"tv stand\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of fruit items displayed on the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"fruit\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person with their right arm raised in the garage that our team's name is [unknown]."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams name\",\"gesture\":\"person raising their right arm\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"pose\":\"lying person\",\"room\":\"garden\"},{\"sequence\":3,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTake a pen from the kitchen table, inform the person sitting at the side table that the person at the nightstand has a message for them, and then tell me the weight of the lightest object on the bedroom desk."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"side table\",\"to_location\":\"nightstand\"},{\"sequence\":3,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"lightest\",\"placement_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the spoon on the dining room table and then approach Laura there, introducing yourself, and then trail George from the bookshelf through the house until he reaches the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"utensil\",\"room\":\"dining room\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Laura\",\"room\":\"dining room\"},{\"sequence\":3,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"George\",\"from_location\":\"bookshelf\",\"to_room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSay hello to the person wearing an orange blouse in the hallway, then proceed to the dining room to locate a cup."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"orange blouse\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object\":\"cup\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person who has been lying in the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"pose\":\"lying person\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nWhat is the lightest item on the kitchen table utensils?"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"utensil\",\"object_comparator\":\"lightest\",\"placement_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLook for a dining room utensil."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"utensil\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nObserve Bob's movement from the dining room to the hallway."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Bob\",\"from_location\":\"dining table\",\"to_room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet the person in the white coat in the kitchen, salute Julia in the bedroom, and retrieve a snack from the side table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"white coat\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Julia\",\"room\":\"bedroom\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"snack\",\"source_location\":\"side table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTake the bowl from the living room, grab an electronic device from the kitchen, and then meet up with Julia near the office chair, after which proceed to the bathroom and reunite them there."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object\":\"bowl\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"electronic\",\"placement_location\":\"kitchen table\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Julia\",\"meet_location\":\"office chair\",\"find_room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the person waving in the bathroom and grab a utensil from the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Laura from the kitchen table to the garden where she is likely to be sitting or working."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Laura\",\"from_location\":\"kitchen table\",\"to_room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPlease tell the person with their left arm raised in the dining room that today is Monday."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"what day is today\",\"gesture\":\"person raising their left arm\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person in the yellow jacket from the counter over to the garden area outside."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"yellow jacket\",\"from_location\":\"counter\",\"to_location\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLocate the individual standing in the bathroom, then report the number of beverages on the cabinet. Next, escort the person wearing the red sweater from the dining table to the television stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"pose\":\"standing person\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"drink\",\"placement_location\":\"cabinet\"},{\"sequence\":3,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"red sweater\",\"from_location\":\"dining table\",\"to_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Fiona from the entrance door through to the study, then describe the gesture of the individual in the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Fiona\",\"from_location\":\"entrance door\",\"to_room\":\"study\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"gesture\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person who is sitting in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"pose\":\"sitting person\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLet Laura know who I am, then look for a book that has been misplaced in the bathroom, and after that, guide the person wearing a white sweater from their office chair to the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Laura\",\"room\":\"office\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object\":\"book\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"white sweater\",\"from_location\":\"office chair\",\"to_location\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the individual wearing the gray shirt from the dining area over to the garden bench."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray shirt\",\"from_location\":\"dining table\",\"to_location\":\"garden bench\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab the snack item from the side table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"snack\",\"placement_location\":\"side table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of snack items currently placed on the bedroom desk."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"snack\",\"placement_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Oliver from the bookshelf to the side table, then proceed to the kitchen table to meet Charlie, and afterwards, find both Oliver and Charlie in the office, then identify the smallest object on the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Oliver\",\"from_location\":\"bookshelf\",\"to_location\":\"side table\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Charlie\",\"meet_location\":\"kitchen table\",\"find_room\":\"office\"},{\"sequence\":3,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"smallest\",\"placement_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the person sitting at the garden bench."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"garden bench\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nThe person is standing in front of the bathroom sink."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"location\":\"bathroom sink\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPick an apple from the cabinet, go to the garden next, and afterwards pick a stationery item from the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"apple\",\"source_location\":\"cabinet\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"garden\"},{\"sequence\":3,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of individuals in the bathroom who are intentionally providing false information, and then proceed to meet George at the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"lying person\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"George\",\"location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nHow many people are sitting in the living room?"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nDescribe the body language of the person as they reach for a book on the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"gesture\",\"location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Diana from the office chair to the office, then locate a fruit item in the study and relay back to your team, informing the person pointing to the left in the garden about your country's location."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Diana\",\"from_location\":\"office chair\",\"to_room\":\"office\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"fruit\",\"room\":\"study\"},{\"sequence\":3,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams country\",\"gesture\":\"person pointing to the left\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFetch a stationery item from the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"stationery\",\"source_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPick up a kitchen utensil from the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLet the waving person in the garage know that our team is affiliated with the company, and inform them that we'll be in touch soon."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams affiliation\",\"gesture\":\"waving person\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"thinnest\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGuide the person wearing the orange sweater from the living room couch to the kitchen table, then have them acknowledge their location. After that, go to the bedroom, look for the person raising their left arm, and tell them it's Wednesday."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"orange sweater\",\"from_location\":\"living room couch\",\"to_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the week\",\"gesture\":\"person raising their left arm\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPick up a phone from the bookshelf in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"study\"},{\"sequence\":2,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"phone\",\"source_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Fiona as she exits the cabinet and proceeds to the office."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Fiona\",\"from_location\":\"cabinet\",\"to_room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Bob at the cabinet in the study and then locate him."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Bob\",\"meet_location\":\"cabinet\",\"find_room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the individual who was lying from the side table to the bathroom sink, meet Hannah at the office chair, and then locate her in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"lying person\",\"from_location\":\"side table\",\"to_location\":\"bathroom sink\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Hannah\",\"meet_location\":\"office chair\",\"find_room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLead the person from the living room couch to the counter, follow them into the bedroom where they point to the right, and then tell me how many people are waving at them in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"lying person\",\"from_location\":\"living room couch\",\"to_location\":\"counter\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"person pointing to the right\",\"room\":\"bedroom\"},{\"sequence\":3,\"action\":\"countPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nThere is 1 person waving in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"gesture\",\"from_location\":\"hallway shelf\",\"to_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the lightest drink item on the dining table, then proceed to the hallway to meet George, who is standing by the shelf, and after locating them, escort them to the garden. Once there, head back to the kitchen and retrieve an apple from the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"drink\",\"object_comparator\":\"lightest\",\"placement_location\":\"dining table\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"George\",\"meet_location\":\"hallway shelf\",\"find_room\":\"garden\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"apple\",\"source_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFirst, locate Ivan on the garden bench, then move to the bathroom to find them. Following this, head into the dining room to greet the person wearing a white blouse, and finally, meet George at the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Ivan\",\"meet_location\":\"garden bench\",\"find_room\":\"bathroom\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"white blouse\",\"room\":\"dining room\"},{\"sequence\":3,\"action\":\"meetPrsAtBeac\",\"person_name\":\"George\",\"location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the bathroom, then meet George at the side table, and finally, report back on how many people in the kitchen are raising their right arm."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"George\",\"location\":\"side table\"},{\"sequence\":3,\"action\":\"countPrsInRoom\",\"gesture\":\"person raising their right arm\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person standing on the nightstand to the couch in the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"standing person\",\"from_location\":\"nightstand\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the smallest utensil item on the dining table, then retrieve a phone from the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"utensil\",\"object_comparator\":\"smallest\",\"placement_location\":\"dining table\"},{\"sequence\":2,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"phone\",\"source_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell John at the living room couch that Sarah is waiting at the entrance door, then let me know how many people are lying in the bathroom, then head to the cabinet to meet Diana and afterwards locate them in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"living room couch\",\"to_location\":\"entrance door\"},{\"sequence\":2,\"action\":\"countPrsInRoom\",\"pose\":\"lying person\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Diana\",\"meet_location\":\"cabinet\",\"find_room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell me what items are on the nightstand, identify the heaviest one, report from the bathroom how many individuals are lying down and not telling the truth, proceed to the garden bench to meet Ivan, and then relocate to the hallway where he is waiting."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"nightstand\"},{\"sequence\":2,\"action\":\"countPrsInRoom\",\"pose\":\"lying person\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Ivan\",\"meet_location\":\"garden bench\",\"find_room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind out how many snacks are on the nightstand, then head to the garage to salute Laura, after which you'll escort Bob from the dining table over to the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"snack\",\"placement_location\":\"nightstand\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Laura\",\"room\":\"garage\"},{\"sequence\":3,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Bob\",\"from_location\":\"dining table\",\"to_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person on the couch in the living room to the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"standing person\",\"from_location\":\"living room couch\",\"to_location\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the heaviest object on the bedroom desk and report back, then proceed to locate a book in the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object\":\"book\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCheck the garden for any misplaced electronic devices and note the position of the person standing near the cabinet to inform the person at the counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"electronic\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"cabinet\",\"to_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nDetermine how many people are pointing to the right in the office by counting them."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"office\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person in the blue coat from the bathroom to the hallway, then proceed to the garden bench, where you'll assist the individual lying there in getting up and walking to the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"blue coat\",\"from_location\":\"bathroom sink\",\"to_location\":\"hallway\"},{\"sequence\":2,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"lying person\",\"from_location\":\"garden bench\",\"to_location\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPlease greet the individual wearing the yellow coat who is currently located in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"yellow coat\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person at the bathroom sink to the person at the cabinet, then take the person in the hallway wearing the gray sweater to the living room and later meet that person at the bathroom sink and find them in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"gesture\",\"from_location\":\"bathroom sink\",\"to_location\":\"cabinet\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray sweater\",\"from_location\":\"hallway shelf\",\"to_location\":\"living room couch\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Alice\",\"meet_location\":\"bathroom sink\",\"find_room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person raising their left arm in the bathroom that it is currently Wednesday."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the week\",\"gesture\":\"person raising their left arm\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab the juice from the counter, then keep an eye on Bob as he moves from the TV stand to the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"juice\",\"placement_location\":\"counter\"},{\"sequence\":2,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Bob\",\"from_location\":\"tv stand\",\"to_room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the snacking items and report the number."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"snack\",\"placement_location\":\"side table\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"nightstand\",\"to_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nHead to the nightstand to meet Nancy, then proceed to the bathroom to locate her."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Nancy\",\"meet_location\":\"nightstand\",\"find_room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nBring a chip from the side table, then inform the person at the nightstand about the person sitting at the kitchen table, and afterwards follow the person who is gesturing to their left in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"chips\",\"source_location\":\"side table\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"nightstand\",\"to_location\":\"kitchen table\"},{\"sequence\":3,\"action\":\"followPrsAtLoc\",\"gesture\":\"person pointing to the left\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCall out the name of the person in the garage and retrieve a Coca-Cola from the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"coke\",\"source_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the individual pointing to the right from the kitchen table to the bookshelf and follow the person who raises their right arm in the hallway."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the right\",\"from_location\":\"kitchen table\",\"to_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"person raising their right arm\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell me the pose of the person in the garden. Then tell the name of the person at the dining table to the person sitting in the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"dining table\",\"to_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nAsk the person pointing to the left in the garage what day it is, then guide them to the bathroom, and report back to the person sitting at the garden bench with the pose of the person lying at the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"what day is today\",\"gesture\":\"person pointing to the left\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"nightstand\",\"to_location\":\"garden bench\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the person at the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the lightest electronic item on the kitchen table and its description."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"electronic\",\"object_comparator\":\"lightest\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the right\",\"from_location\":\"nightstand\",\"to_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the living room and retrieve an item from the nightstand, then count the number of fruits displayed on the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"nightstand\"},{\"sequence\":3,\"action\":\"countObjOnPlcmt\",\"object_category\":\"fruit\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people in the dining room wearing an orange shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"orange shirt\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nRetrieve the cookie from the dining table and the banana from the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"cookie\",\"source_location\":\"dining table\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object\":\"banana\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Kevin from the garden bench to the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Kevin\",\"from_location\":\"garden bench\",\"to_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce yourself to the person wearing a blue sweater, then head to the office to see if you can find a snack, afterwards, sit with Nancy on the garden bench, and check the kitchen to see if she's there waiting for you."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"blue sweater\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"snack\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Nancy\",\"meet_location\":\"garden bench\",\"find_room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the people in the dining room and then identify which ones are wearing a yellow t-shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"yellow t shirt\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGuide the person who raised their right arm from the garden bench to the office, and then proceed to the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person raising their right arm\",\"from_location\":\"garden bench\",\"to_location\":\"office\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce yourself to Edward in the dining room, then advise the person standing near the TV to the person operating the counter, and escort the individual with their left arm raised from the garden bench to the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Edward\",\"room\":\"dining room\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"gesture\",\"from_location\":\"tv stand\",\"to_location\":\"counter\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person raising their left arm\",\"from_location\":\"garden bench\",\"to_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nThe person sitting at the bedroom desk is in a seated position."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object\":\"orange\",\"room\":\"garden\"},{\"sequence\":3,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"what day is today\",\"gesture\":\"person pointing to the left\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person who lied on the counter to the kitchen table, then pick the coke from the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"lying person\",\"from_location\":\"counter\",\"to_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object\":\"coke\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet the person in the gray coat who is currently in the bedroom and then also say hello to Oliver when you are in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"gray coat\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Oliver\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nInform the waving person in the office which country your team is from."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams country\",\"gesture\":\"waving person\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce yourself to the person in the orange shirt you see in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"orange shirt\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the office, pick up the waving person from the nightstand, and take them to the bedroom desk, then pick up the remote from the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"office\"},{\"sequence\":2,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"waving person\",\"from_location\":\"nightstand\",\"to_location\":\"bedroom desk\"},{\"sequence\":3,\"action\":\"takeObjFromPlcmt\",\"object\":\"remote\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab a phone from the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"phone\",\"source_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGuide someone wearing a white jacket from the cabinet to the kitchen, then head to the bathroom and meet Alice at the bathroom sink, before checking the kitchen to see if they're there, and finally meeting Edward at the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"white jacket\",\"from_location\":\"cabinet\",\"to_location\":\"kitchen\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Alice\",\"meet_location\":\"bathroom sink\",\"find_room\":\"kitchen\"},{\"sequence\":3,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Edward\",\"location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Michael from the bathroom to the living room, and then guide the person who is pointing left from the counter to the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Michael\",\"from_location\":\"bathroom sink\",\"to_room\":\"living room\"},{\"sequence\":2,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person pointing to the left\",\"from_location\":\"counter\",\"to_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell me the name of the person at the bathroom sink, then salute the person wearing a blue sweater in the hallway, and finally hand me the wooden spoon from the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"bathroom sink\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"blue sweater\",\"room\":\"hallway\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"utensil\",\"source_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the garden and greet Charlie, then proceed to the cabinet to meet George, and finally, head to the study to locate them."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Charlie\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"George\",\"meet_location\":\"cabinet\",\"find_room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nRetrieve the bowl from the bedroom desk, count the number of fruits on it, and respond to the person waving in the dining room with your team's country's name."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"bowl\",\"placement_location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"fruit\",\"placement_location\":\"bedroom desk\"},{\"sequence\":3,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams country\",\"gesture\":\"waving person\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nBring a pen from the counter, pick up the cup from the counter, and locate the person waving in the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object_category\":\"stationery\",\"source_location\":\"counter\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object\":\"cup\",\"placement_location\":\"counter\"},{\"sequence\":3,\"action\":\"findPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort a person wearing a red sweater from the cabinet to the bathroom sink and identify the heaviest item on the bathroom counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"red sweater\",\"from_location\":\"cabinet\",\"to_location\":\"bathroom sink\"},{\"sequence\":2,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the people in the living room wearing a yellow t-shirt and then describe the lightest object on the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Julia\",\"location\":\"dining table\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"yellow t shirt\",\"room\":\"living room\"},{\"sequence\":3,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"lightest\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people standing in the study, then meet Hannah in the office chair before proceeding to the living room to locate them."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"standing person\",\"room\":\"study\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Hannah\",\"meet_location\":\"office chair\",\"find_room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLocate the individual in the bedroom raising their right arm, and report on the size and type of the largest snack item visible on the TV stand nearby."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"person raising their right arm\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"largest\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the individual gesturing towards the right in the living room and confirm their location, then describe the largest beverage container on the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"drink\",\"object_comparator\":\"largest\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove George from the living room couch to the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"George\",\"from_location\":\"living room couch\",\"to_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Kevin from the front door, then proceed to the bedroom, and afterwards, identify the person in the study. Finally, locate a water bottle in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Kevin\",\"from_location\":\"entrance door\",\"to_room\":\"bedroom\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"room\":\"study\"},{\"sequence\":3,\"action\":\"findObjInRoom\",\"object\":\"water\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGive me a knife from the kitchen table, then identify the lightest electronic item on the side table, and finally, relocate Edward from the tv stand to the bedroom desk."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"knife\",\"source_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"electronic\",\"object_comparator\":\"lightest\",\"placement_location\":\"side table\"},{\"sequence\":3,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Edward\",\"from_location\":\"tv stand\",\"to_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSay hello to the person in the blue t-shirt in the hallway, and then inform the person in the study pointing to the left of your team's affiliation. After that, relocate Bob from the side table to the living room couch."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"blue t shirt\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams affiliation\",\"gesture\":\"person pointing to the left\",\"room\":\"study\"},{\"sequence\":3,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Bob\",\"from_location\":\"side table\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nDirect Alice from the bathroom sink to the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Alice\",\"from_location\":\"bathroom sink\",\"to_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab a drink from the hallway shelf, then inform the person at the garden bench about the pose of the person at the kitchen table, and finally, let me know how many people in the kitchen are wearing a blue shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object_category\":\"drink\",\"placement_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"garden bench\",\"to_location\":\"kitchen table\"},{\"sequence\":3,\"action\":\"countClothPrsInRoom\",\"clothing\":\"blue shirt\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the person waving in the dining room and then report on the number of individuals in the living room wearing a red shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"dining room\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"red shirt\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nInform the person in the bathroom wearing the blue sweater of your greeting, then ask the individual at the counter to describe the pose of the person they're facing, and finally, state the name of the person sitting at the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"blue sweater\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"counter\",\"to_location\":\"cabinet\"},{\"sequence\":3,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGuide the person wearing a gray sweater from the bedroom to the dining room after meeting Alice at the counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Alice\",\"location\":\"counter\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray sweater\",\"from_location\":\"bedroom desk\",\"to_location\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Laura at the counter, then inform your team's country of origin to the person waving at you in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Laura\",\"location\":\"counter\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams country\",\"gesture\":\"waving person\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nInform the person in the living room who is waving that the current time is [insert time] and then proceed to the study to determine the number of individuals wearing an orange blouse."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the time\",\"gesture\":\"waving person\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"orange blouse\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort Fiona from the bedroom desk to the bathroom sink and then proceed to count the stationery items on the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Fiona\",\"from_location\":\"bedroom desk\",\"to_location\":\"bathroom sink\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo outside to the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nWhat is the biggest item on the kitchen table that's related to writing or drawing?"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"stationery\",\"object_comparator\":\"largest\",\"placement_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nObserve George's movement from the office chair to the bathroom, and afterwards, acknowledge him with a salute while he's still in the office."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"George\",\"from_location\":\"office chair\",\"to_room\":\"bathroom\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"George\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Fiona at the entrance door of the building."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Fiona\",\"location\":\"entrance door\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLocate a snack item in the garden, then relay the current date to someone waving from the bedroom and retrieve a book from the counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"snack\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the month\",\"gesture\":\"waving person\",\"room\":\"bedroom\"},{\"sequence\":3,\"action\":\"takeObjFromPlcmt\",\"object\":\"book\",\"placement_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPick up the juice that is spilled on the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"juice\",\"placement_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nNotify the person at the dining table of the pose of the person at the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"hallway shelf\",\"to_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTake Hannah from the nightstand to the bathroom, then move the person in the black jacket from the bedroom desk to the side table, and let me know how many people in the kitchen are wearing a gray shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Hannah\",\"from_location\":\"nightstand\",\"to_location\":\"bathroom\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"black jacket\",\"from_location\":\"bedroom desk\",\"to_location\":\"side table\"},{\"sequence\":3,\"action\":\"countClothPrsInRoom\",\"clothing\":\"gray shirt\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove Edward from the kitchen table to the side table, and then check the bedroom to see how many people are wearing a black shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Edward\",\"from_location\":\"kitchen table\",\"to_location\":\"side table\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"black shirt\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Laura at the desk in the bedroom and then head to the dining table to meet Kevin, after which we'll search for them in the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Laura\",\"location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Kevin\",\"meet_location\":\"dining table\",\"find_room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind Bob at the bathroom sink and then direct yourself to where they will be located in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Bob\",\"meet_location\":\"bathroom sink\",\"find_room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Fiona at the side table, then proceed to the study to locate the other person, and from there, head to the bathroom to meet Kevin at the sink. Afterward, escort the individual wearing the orange blouse from the bedroom desk to the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Fiona\",\"meet_location\":\"side table\",\"find_room\":\"study\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Kevin\",\"location\":\"bathroom sink\"},{\"sequence\":3,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"orange blouse\",\"from_location\":\"bedroom desk\",\"to_location\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of utensils on the hallway shelf, and note the number of individuals in the kitchen wearing a red shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"red shirt\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce myself to the person raising their right arm in the study by saying, \"Excuse me, I noticed you've raised your right arm, could you please lower it for me?\""
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"something about yourself\",\"gesture\":\"person raising their right arm\",\"room\":\"study\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"nightstand\"},{\"sequence\":3,\"action\":\"followPrsAtLoc\",\"pose\":\"standing person\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the person gesturing to the right in the living room, and then locate the person seated in the hallway. Next, count the number of utensil items placed on the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"gesture\":\"person pointing to the right\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"hallway\"},{\"sequence\":3,\"action\":\"countObjOnPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove to the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nStand up and turn around to face the person at the kitchen table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"pose\",\"from_location\":\"counter\",\"to_location\":\"kitchen table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell everyone in the office to greet Julia, ask someone to count how many people in the hallway are wearing a red coat, and describe the gesture of the person near the bookshelf to the person on the living room couch."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Julia\",\"room\":\"office\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"red coat\",\"room\":\"hallway\"},{\"sequence\":3,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"gesture\",\"from_location\":\"bookshelf\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet George in the study, then go to the hallway and count the people sitting there. Next, head to the person sitting at the bathroom sink and escort them to the side table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"George\",\"room\":\"study\"},{\"sequence\":2,\"action\":\"countPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"hallway\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"sitting person\",\"from_location\":\"bathroom sink\",\"to_location\":\"side table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nAsk the person sitting at the dining table to report to the person standing next to the bookshelf, and then go over to the bedroom to greet the individual wearing the yellow t-shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"gesture\",\"from_location\":\"dining table\",\"to_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"yellow t shirt\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCheck the kitchen first, and then count the number of individuals in the bathroom who are wearing a gray sweater."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"gray sweater\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the thinnest object on the dining table, while moving from the bedroom desk to the living room couch by having Oliver walk from the counter to the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"thinnest\",\"placement_location\":\"dining table\"},{\"sequence\":2,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person raising their left arm\",\"from_location\":\"bedroom desk\",\"to_location\":\"living room couch\"},{\"sequence\":3,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Oliver\",\"from_location\":\"counter\",\"to_room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLead Diana from the bathroom sink to the entrance door, then move the person at the bathroom sink to the hallway shelf, finally greeting the person in the study wearing a white blouse."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Diana\",\"from_location\":\"bathroom sink\",\"to_location\":\"entrance door\"},{\"sequence\":2,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"standing person\",\"from_location\":\"bathroom sink\",\"to_location\":\"hallway shelf\"},{\"sequence\":3,\"action\":\"greetClothDscInRm\",\"clothing\":\"white blouse\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nHow many people who are lying in the bedroom are not telling the truth?"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"lying person\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person standing in the kitchen next to the right side of the kitchen's central axis the current day of the month."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the month\",\"gesture\":\"person pointing to the right\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPlease check the hallway for a misplaced phone."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object\":\"phone\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the waving person in the office that today is [day of the week] and ask if they know how many coworkers in the office are wearing an orange coat."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the week\",\"gesture\":\"waving person\",\"room\":\"office\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"orange coat\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet Nancy in the kitchen, then inform the person sitting in the office chair that the name is to be shared with the person standing near the TV, afterwards head to the bathroom to meet Alice, then locate her in the garden."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Nancy\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"office chair\",\"to_location\":\"tv stand\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Alice\",\"meet_location\":\"bathroom sink\",\"find_room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLocate the TV remote on the coffee table in the living room, then follow Alice as she walks from the bathroom sink, past the laundry room, and into the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"electronic\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Alice\",\"from_location\":\"bathroom sink\",\"to_room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person in the yellow jacket from the garden bench to the bookshelf, then go to the dining table and lead Oliver to the office chair, and finally head to the bathroom to count how many people are raising their left arm."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"yellow jacket\",\"from_location\":\"garden bench\",\"to_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Oliver\",\"from_location\":\"dining table\",\"to_location\":\"office chair\"},{\"sequence\":3,\"action\":\"countPrsInRoom\",\"gesture\":\"person raising their left arm\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLocate the individual gesturing to the left within the garage, and retrieve a cereal item from the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"person pointing to the left\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"cereal\",\"source_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the thinnest snack item on the kitchen table and note it down."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"thinnest\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"gesture\":\"person raising their left arm\",\"room\":\"garage\"},{\"sequence\":3,\"action\":\"goToLoc\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the heaviest object on the side table and confirm with George."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"George\",\"location\":\"entrance door\"},{\"sequence\":2,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"side table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the items on the counter and note the weight of the lightest stationery item on the kitchen table, then guide Fiona from the garden bench to the tv stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"drink\",\"placement_location\":\"counter\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"stationery\",\"object_comparator\":\"lightest\",\"placement_location\":\"kitchen table\"},{\"sequence\":3,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Fiona\",\"from_location\":\"garden bench\",\"to_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind a beverage in the garden"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"drink\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSay hello to Edward in the bedroom, greet the person with the yellow coat in the bathroom, and then retrieve a book from the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Edward\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"yellow coat\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"book\",\"source_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSay hello to Edward in the hallway."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Edward\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the snack item in the study, then proceed to meet Fiona at the side table, afterwards, count and report the number of stationery items on the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"snack\",\"room\":\"study\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Fiona\",\"location\":\"side table\"},{\"sequence\":3,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the person waving in the bedroom, then report on the size of the largest snack on the table beside them."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"waving person\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"largest\",\"placement_location\":\"side table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person at the garden bench to the person standing near the cabinet that their name is being requested."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"garden bench\",\"to_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Edward at the bookshelf, then follow Kevin from the TV stand to the bathroom, after which proceed to the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Edward\",\"location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Kevin\",\"from_location\":\"tv stand\",\"to_room\":\"bathroom\"},{\"sequence\":3,\"action\":\"goToLoc\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort Hannah from the kitchen table to the living room couch and then identify the heaviest snack item on the kitchen counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Hannah\",\"from_location\":\"kitchen table\",\"to_location\":\"living room couch\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"heaviest\",\"placement_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Fiona at the TV stand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Fiona\",\"location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the employee at the TV stand and then follow the staff member in the kitchen who is waving at me."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"tv stand\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the individual gesturing towards the right within the kitchen area."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet Laura at the dining table and nod hello to Nancy in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Laura\",\"location\":\"dining table\"},{\"sequence\":2,\"action\":\"greetNameInRm\",\"person_name\":\"Nancy\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIntroduce yourself to Oliver in the garden, then guide the person wearing a gray sweater from the TV stand and walk them over to the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Oliver\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray sweater\",\"from_location\":\"tv stand\",\"to_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind a snack in the kitchen and then retrieve the knife from the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object_category\":\"snack\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object\":\"knife\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nThere are zero people pointing to the right in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"bathroom sink\",\"to_location\":\"living room couch\"},{\"sequence\":3,\"action\":\"findPrsInRoom\",\"pose\":\"standing person\",\"room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people in the garden who are currently standing."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"standing person\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Edward from the bedroom to the bathroom, note the largest electronic item on the bookshelf, then move Diana from the office chair to the hallway shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Edward\",\"from_location\":\"bedroom desk\",\"to_room\":\"bathroom\"},{\"sequence\":2,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"electronic\",\"object_comparator\":\"largest\",\"placement_location\":\"bookshelf\"},{\"sequence\":3,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Diana\",\"from_location\":\"office chair\",\"to_location\":\"hallway shelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the smallest snack item on the kitchen table, and list the number of stationery items found on the counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"snack\",\"object_comparator\":\"smallest\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab a book from the shelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"book\",\"source_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the individual standing in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"pose\":\"standing person\",\"room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort Edward from the living room couch to the garden, then count and report the number of individuals seated in the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Edward\",\"from_location\":\"living room couch\",\"to_location\":\"garden\"},{\"sequence\":2,\"action\":\"countPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nWhat is the largest fruit typically found on a nightstand?"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"fruit\",\"object_comparator\":\"biggest\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGuide the person pretending to be a cabinet to the living room, then get the book from the counter, and then identify the largest object on the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"lying person\",\"from_location\":\"cabinet\",\"to_location\":\"living room\"},{\"sequence\":2,\"action\":\"takeObjFromPlcmt\",\"object\":\"book\",\"placement_location\":\"counter\"},{\"sequence\":3,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"largest\",\"placement_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow the individual in the living room, then approach the person wearing a gray shirt in the garage and introduce yourself."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followPrsAtLoc\",\"pose\":\"standing person\",\"room\":\"living room\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"gray shirt\",\"room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the person in the bedroom, note their pose and position in the room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"pose\",\"room\":\"bedroom\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"fruit\",\"object_comparator\":\"lightest\",\"placement_location\":\"tv stand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify and point out the largest item on the countertop, then escort Laura from the bookshelf to the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"biggest\",\"placement_location\":\"counter\"},{\"sequence\":2,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Laura\",\"from_location\":\"bookshelf\",\"to_room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nLook for a book in the bedroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object\":\"book\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the individuals in the hallway wearing a black coat, then locate the person who was pointing to the right in the garage, and finally, accompany Bob from the entrance to the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"black coat\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"person pointing to the right\",\"room\":\"garage\"},{\"sequence\":3,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Bob\",\"from_location\":\"entrance door\",\"to_room\":\"study\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGuide the person in the red t-shirt from the dining table to the bedroom and then follow the individual who is pointing left in that room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"red t shirt\",\"from_location\":\"dining table\",\"to_location\":\"bedroom\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"person pointing to the left\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nSay to the person pointing to the right in the kitchen, \"The time is 3:45 PM.\" Then, escort Laura from the living room shelf to the dining table and ask the person in the living room what gesture they are making."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the time\",\"gesture\":\"person pointing to the right\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Laura\",\"from_location\":\"hallway shelf\",\"to_location\":\"dining table\"},{\"sequence\":3,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"gesture\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nPick up the bowl from the counter and then inform the person in the living room, who is being pointed at by another person, of your team's country."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"bowl\",\"placement_location\":\"counter\"},{\"sequence\":2,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"your teams country\",\"gesture\":\"person pointing to the left\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab the remote control from the dining table."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"remote\",\"source_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nTell the person in the hallway with their arm raised to look at their digital device to find out the current day of the month."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the day of the month\",\"gesture\":\"person raising their right arm\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person from the desk in the bedroom to the shelf in the hallway, and guide Oliver from the cabinet to the office."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guidePrsFromBeacToBeac\",\"pose\":\"sitting person\",\"from_location\":\"bedroom desk\",\"to_location\":\"hallway shelf\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Oliver\",\"from_location\":\"cabinet\",\"to_location\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the standing individual in the residing area"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findPrsInRoom\",\"pose\":\"standing person\",\"room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMove the person wearing the gray sweater from the couch in the living room to the couch in the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray sweater\",\"from_location\":\"living room couch\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nAsk the person sitting at the bedroom desk for their name."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nWhat is the smallest electronic item on the bedroom desk?"
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"electronic\",\"object_comparator\":\"smallest\",\"placement_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGrab the juice from the TV stand and find the person in the garage who is raising their right arm."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"juice\",\"placement_location\":\"tv stand\"},{\"sequence\":2,\"action\":\"findPrsInRoom\",\"gesture\":\"person raising their right arm\",\"room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people sitting in the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"pose\":\"sitting person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of participants wearing a white coat in the study."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"white coat\",\"room\":\"study\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"gesture\",\"room\":\"bedroom\"},{\"sequence\":3,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of people pointing to the right in the bathroom."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"bathroom\"},{\"sequence\":2,\"action\":\"countObjOnPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"dining table\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the item on the bookshelf that is the least substantial in terms of physical depth."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"thinnest\",\"placement_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of utensils on the kitchen table, proceed to the bathroom to locate a juice, then head to the bathroom sink to meet Laura, after which you will find them in the dining room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object\":\"juice\",\"room\":\"bathroom\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Laura\",\"meet_location\":\"bathroom sink\",\"find_room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet Fiona in the hallway."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Fiona\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFind the knife on the kitchen table, then locate an electronic device in the office and identify the person standing in the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"takeObjFromPlcmt\",\"object\":\"knife\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"electronic\",\"room\":\"office\"},{\"sequence\":3,\"action\":\"findPrsInRoom\",\"pose\":\"standing person\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort Ivan from the office chair to the garden, then proceed to the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"kitchen\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Ivan\",\"from_location\":\"office chair\",\"to_location\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Charlie at the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Charlie\",\"location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the person in the orange jacket from the garden bench to the hallway, then meet Hannah at the office chair and guide the person with their right arm raised from the dining table to the kitchen."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"orange jacket\",\"from_location\":\"garden bench\",\"to_location\":\"hallway\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Hannah\",\"location\":\"office chair\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"person raising their right arm\",\"from_location\":\"dining table\",\"to_location\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGo to the garage and count the number of people wearing gray t-shirts, then proceed to the office, lead the person waving from the office chair to the living room couch."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"gray t shirt\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"goToLoc\",\"room\":\"garage\"},{\"sequence\":3,\"action\":\"guidePrsFromBeacToBeac\",\"gesture\":\"waving person\",\"from_location\":\"office chair\",\"to_location\":\"living room couch\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet George at the office chair, and then proceed to check the bathroom for their whereabouts."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"George\",\"meet_location\":\"office chair\",\"find_room\":\"bathroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the heaviest utensil on the bookshelf, then locate Charlie who is waving in the garden, proceed to the bedroom to find them at the desk, and finally check the living room to confirm their presence."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"utensil\",\"object_comparator\":\"heaviest\",\"placement_location\":\"bookshelf\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"gesture\":\"waving person\",\"room\":\"garden\"},{\"sequence\":3,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Charlie\",\"meet_location\":\"bedroom desk\",\"find_room\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the person in the hallway and state their name, followed by describing the largest object on the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"room\":\"hallway\"},{\"sequence\":2,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"biggest\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of stationery items on the nightstand."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"nightstand\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nFollow Charlie as he gets up from the couch in the living room and walks down the hallway. Then, look around the living room and count how many people are wearing a gray shirt. Finally, proceed to the bedroom and salute the person wearing a black shirt."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Charlie\",\"from_location\":\"living room couch\",\"to_room\":\"hallway\"},{\"sequence\":2,\"action\":\"countClothPrsInRoom\",\"clothing\":\"gray shirt\",\"room\":\"living room\"},{\"sequence\":3,\"action\":\"greetClothDscInRm\",\"clothing\":\"black shirt\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGet a phone from the TV stand and hand it to me, then go into the hallway and greet the nurse wearing a white coat."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"bringMeObjFromPlcmt\",\"object\":\"phone\",\"source_location\":\"tv stand\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"white coat\",\"room\":\"hallway\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet the person in the garage wearing a gray shirt, and inform them that the person's name is at the nightstand, and that you need to tell that name to the person at the bookshelf."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"gray shirt\",\"room\":\"garage\"},{\"sequence\":2,\"action\":\"tellPrsInfoAtLocToPrsAtLoc\",\"person_info\":\"name\",\"from_location\":\"nightstand\",\"to_location\":\"bookshelf\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort Kevin from the bathroom to the hallway, then Alice from the garden bench to the bedroom desk, before noting the actions of the person in the garage."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"followNameFromBeacToRoom\",\"person_name\":\"Kevin\",\"from_location\":\"bathroom sink\",\"to_room\":\"hallway\"},{\"sequence\":2,\"action\":\"guideNameFromBeacToBeac\",\"person_name\":\"Alice\",\"from_location\":\"garden bench\",\"to_location\":\"bedroom desk\"},{\"sequence\":3,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"gesture\",\"room\":\"garage\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the lightest object on the counter and name it. Then, navigate to the garden and find a snack item."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"lightest\",\"placement_location\":\"counter\"},{\"sequence\":2,\"action\":\"findObjInRoom\",\"object_category\":\"snack\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nGreet Michael in the dining area."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetNameInRm\",\"person_name\":\"Michael\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the stationery items on the dining table, then guide the person in the gray coat from the tv stand to the garden bench, and finally identify the thinnest stationery item on the cabinet."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"stationery\",\"placement_location\":\"dining table\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"gray coat\",\"from_location\":\"tv stand\",\"to_location\":\"garden bench\"},{\"sequence\":3,\"action\":\"tellCatPropOnPlcmt\",\"object_category\":\"stationery\",\"object_comparator\":\"thinnest\",\"placement_location\":\"cabinet\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCheck the garden for a lost phone."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"findObjInRoom\",\"object\":\"phone\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nHead to the garden location."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"goToLoc\",\"room\":\"garden\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nEscort the individual in the red coat from the side table to the living room."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"red coat\",\"from_location\":\"side table\",\"to_location\":\"living room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nHead to the nightstand to meet Laura and then proceed to the office to locate her."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetNameAtLocThenFindInRm\",\"person_name\":\"Laura\",\"meet_location\":\"nightstand\",\"find_room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the heaviest object on the side table in the bedroom and follow the person sitting there. Next, locate the person waving from the office and notify them of the current time."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"side table\"},{\"sequence\":2,\"action\":\"followPrsAtLoc\",\"pose\":\"sitting person\",\"room\":\"bedroom\"},{\"sequence\":3,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"the time\",\"gesture\":\"waving person\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCheck the bedroom for the name on the desk, then meet me at the garden bench to discuss the heaviest item on the kitchen counter."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"location\":\"bedroom desk\"},{\"sequence\":2,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Laura\",\"location\":\"garden bench\"},{\"sequence\":3,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"heaviest\",\"placement_location\":\"counter\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nIdentify the lightest object currently located on the bedroom desk."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"tellObjPropOnPlcmt\",\"object_comparator\":\"lightest\",\"placement_location\":\"bedroom desk\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nAsk the person with their left arm raised in the dining room what day they think tomorrow is."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"talkInfoToGestPrsInRoom\",\"talk_topic\":\"what day is tomorrow\",\"gesture\":\"person raising their left arm\",\"room\":\"dining room\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nApproach the person in the red coat in the garden and greet them, then escort the person in the yellow t-shirt from the side table over to the hallway, and finally locate the individual in the bedroom who is pointing to the right."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"greetClothDscInRm\",\"clothing\":\"red coat\",\"room\":\"garden\"},{\"sequence\":2,\"action\":\"guideClothPrsFromBeacToBeac\",\"clothing\":\"yellow t shirt\",\"from_location\":\"side table\",\"to_location\":\"hallway\"},{\"sequence\":3,\"action\":\"findPrsInRoom\",\"gesture\":\"person pointing to the right\",\"room\":\"bedroom\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nMeet Alice at the entrance door and afterwards, ask for the name of the person inside the office."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"meetPrsAtBeac\",\"person_name\":\"Alice\",\"location\":\"entrance door\"},{\"sequence\":2,\"action\":\"tellPrsInfoInLoc\",\"person_info\":\"name\",\"room\":\"office\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of utensils on the kitchen table and report the result. Then, turn to the person wearing a black blouse in the kitchen and say, \"Hi.\""
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countObjOnPlcmt\",\"object_category\":\"utensil\",\"placement_location\":\"kitchen table\"},{\"sequence\":2,\"action\":\"greetClothDscInRm\",\"clothing\":\"black blouse\",\"room\":\"kitchen\"}]"
+      }
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Parse this robot command:\nCount the number of individuals in the living room who are wearing a blue-colored sweater."
+      },
+      {
+        "role": "assistant",
+        "content": "[{\"sequence\":1,\"action\":\"countClothPrsInRoom\",\"clothing\":\"blue sweater\",\"room\":\"living room\"}]"
+      }
+    ]
+  }
+]
