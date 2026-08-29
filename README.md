@@ -41,6 +41,7 @@ For an example layout check out the: [CompetitionTemplate](https://github.com/Ro
 
 [nicegui](https://nicegui.io/) UI for GPSR generator. Supports rephrasing via openai compatible llm apis over `http://{host}:{port}/v1/chat/completions`. 
 
+
 ```
 athome-generator-gpsr-ui --help
 usage: athome-generator-gpsr-ui [-h] [-u URL] [--host HOST] [--port PORT] [-a API_KEY] [-d DATA_DIR]
